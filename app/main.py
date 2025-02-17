@@ -8,7 +8,7 @@ from typing import List, Dict
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Load the embeddings
-df = pd.read_pickle('tafseer_embeddings.pkl')
+df = pd.read_pickle('app/tafseer_embeddings.pkl')
 
 app = FastAPI()
 
