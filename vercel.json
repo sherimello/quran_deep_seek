@@ -1,18 +1,14 @@
 {
-    "rewrites": [
-        { "source": "/(.*)", "destination": "/index.html" }
-    ],
-    "version": 2,
-
-        "runtime": {
-
-            "name": "python"
-
-        },
-
-        "build": {
-
-            "command": "pip install -r requirements.txt"
-
+    "builds": [
+        {
+            "src": "app/main.py",
+            "use": "@vercel/python"
         }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "app/main.py"
+        }
+    ]
 }
